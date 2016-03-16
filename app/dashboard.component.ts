@@ -6,11 +6,12 @@ import {Router} from 'angular2/router';
 @Component({
     selector: 'my-dashboard',
     template: `
-<h3>Top Heroes</h3>
+<h3>Top Songs</h3>
 <div class="grid grid-pad">
     <div *ngFor="#hero of heroes" (click)="gotoDetail(hero)" class="col-1-4" >
         <div class="module hero">
             <h4>{{hero.name}}</h4>
+            <img width="200" [src]="hero.imageUrl">
         </div>
     </div>
 </div>
@@ -19,7 +20,7 @@ import {Router} from 'angular2/router';
 })
 export class DashboardComponent implements OnInit{
     public heroes: Hero[] = [];
-    
+
     constructor(private _heroService: HeroService,
         private _router: Router){
     }
@@ -29,6 +30,6 @@ export class DashboardComponent implements OnInit{
     }
     gotoDetail(hero: Hero){
         let link = ['HeroDetail', { id: hero.id }];
-        this._router.navigate(link); 
+        this._router.navigate(link);
     }
 }

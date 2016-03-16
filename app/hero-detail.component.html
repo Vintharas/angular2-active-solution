@@ -6,5 +6,12 @@
     <label>name: </label>
     <input [(ngModel)]="hero.name" placeholder="name" />
   </div>
+  <div>
+    <img width="300" [src]="hero.imageUrl">
+  </div>
+  <div>
+    <audio [src]="hero.previewUrl" controls=true></audio>
+  </div>
+
   <button (click)="goBack()">Back</button>
 </div>

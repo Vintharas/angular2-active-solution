@@ -8,6 +8,7 @@ import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { DashboardComponent } from './dashboard.component';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { HTTP_PROVIDERS } from 'angular2/http';
 
 @Component({
   selector: 'my-app',
@@ -17,33 +18,17 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
         <a [routerLink]="['Dashboard']">Dashboard</a>
         <a [routerLink]="['Heroes']">Heroes</a>
     </nav>
-    <router-outlet> 
+    <router-outlet>
   `,
   styleUrls: ['app/app.component.css'],
   directives: [ROUTER_DIRECTIVES],
-  providers: [
-    ROUTER_PROVIDERS,
-    HeroService
-  ]
+  providers: [ ROUTER_PROVIDERS, HeroService, HTTP_PROVIDERS ]
 })
 @RouteConfig([
-  {
-    path: '/heroes',
-    name: 'Heroes',
-    component: HeroesComponent
-  },
- {
-  path: '/dashboard',
-  name: 'Dashboard',
-  component: DashboardComponent,
-  useAsDefault: true
-}, 
-{
-  path: '/detail/:id',
-  name: 'HeroDetail',
-  component: HeroDetailComponent
-},
+  { path: '/heroes', name: 'Heroes', component: HeroesComponent },
+  { path: '/dashboard', name: 'Dashboard', component: DashboardComponent, useAsDefault: true },
+  { path: '/detail/:id', name: 'HeroDetail', component: HeroDetailComponent },
 ])
 export class AppComponent {
-  title = 'Tour of Heroes';
+  title = 'Spotifyyyy';
 }

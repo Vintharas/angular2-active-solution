@@ -1,7 +1,9 @@
 /*
 *      app.component module
 */
-System.register(['angular2/core', './hero.service', './heroes.component', './hero-detail.component', './dashboard.component', 'angular2/router'], function(exports_1) {
+System.register(['angular2/core', './hero.service', './heroes.component', './hero-detail.component', './dashboard.component', 'angular2/router', 'angular2/http'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -11,7 +13,7 @@ System.register(['angular2/core', './hero.service', './heroes.component', './her
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, hero_service_1, heroes_component_1, hero_detail_component_1, dashboard_component_1, router_1;
+    var core_1, hero_service_1, heroes_component_1, hero_detail_component_1, dashboard_component_1, router_1, http_1;
     var AppComponent;
     return {
         setters:[
@@ -32,45 +34,32 @@ System.register(['angular2/core', './hero.service', './heroes.component', './her
             },
             function (router_1_1) {
                 router_1 = router_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
-                    this.title = 'Tour of Heroes';
+                    this.title = 'Spotifyyyy';
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    <h1>{{title}}</h1>\n    <nav>\n        <a [routerLink]=\"['Dashboard']\">Dashboard</a>\n        <a [routerLink]=\"['Heroes']\">Heroes</a>\n    </nav>\n    <router-outlet> \n  ",
+                        template: "\n    <h1>{{title}}</h1>\n    <nav>\n        <a [routerLink]=\"['Dashboard']\">Dashboard</a>\n        <a [routerLink]=\"['Heroes']\">Heroes</a>\n    </nav>\n    <router-outlet>\n  ",
                         styleUrls: ['app/app.component.css'],
                         directives: [router_1.ROUTER_DIRECTIVES],
-                        providers: [
-                            router_1.ROUTER_PROVIDERS,
-                            hero_service_1.HeroService
-                        ]
+                        providers: [router_1.ROUTER_PROVIDERS, hero_service_1.HeroService, http_1.HTTP_PROVIDERS]
                     }),
                     router_1.RouteConfig([
-                        {
-                            path: '/heroes',
-                            name: 'Heroes',
-                            component: heroes_component_1.HeroesComponent
-                        },
-                        {
-                            path: '/dashboard',
-                            name: 'Dashboard',
-                            component: dashboard_component_1.DashboardComponent,
-                            useAsDefault: true
-                        },
-                        {
-                            path: '/detail/:id',
-                            name: 'HeroDetail',
-                            component: hero_detail_component_1.HeroDetailComponent
-                        },
+                        { path: '/heroes', name: 'Heroes', component: heroes_component_1.HeroesComponent },
+                        { path: '/dashboard', name: 'Dashboard', component: dashboard_component_1.DashboardComponent, useAsDefault: true },
+                        { path: '/detail/:id', name: 'HeroDetail', component: hero_detail_component_1.HeroDetailComponent },
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
-            })();
+            }());
             exports_1("AppComponent", AppComponent);
         }
     }
