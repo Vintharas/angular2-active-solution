@@ -16,7 +16,7 @@ import { HTTP_PROVIDERS } from 'angular2/http';
     <h1>{{title}}</h1>
     <nav>
         <a [routerLink]="['Dashboard']">Dashboard</a>
-        <a [routerLink]="['Heroes']">Heroes</a>
+        <a [routerLink]="['Heroes']">Songs</a>
     </nav>
     <router-outlet>
   `,
