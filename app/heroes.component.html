@@ -1,4 +1,4 @@
-    <h2>My Heroes</h2>
+    <h2>My Songs</h2>
     <ul class="heroes">
         <!-- each hero goes here -->
         <li *ngFor="#hero of heroes"
@@ -9,7 +9,7 @@
     </ul>
     <div *ngIf="selectedHero">
         <h2>
-            {{selectedHero.name | uppercase}} is my hero
+            {{selectedHero.name | uppercase}} is my favorite song!
         </h2>
         <button (click)="gotoDetail()">View Details</button>
     </div>
