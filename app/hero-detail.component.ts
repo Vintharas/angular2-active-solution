@@ -21,7 +21,7 @@ export class HeroDetailComponent implements OnInit{
             .getHero(id)
             .then(h => {
               console.log('got hero', h);
-              this.hero = h
+              this.hero = h;
             });
     }
     goBack(){

@@ -20,7 +20,7 @@ Once you've installed node, you can start learning Angular 2 following these ste
 
 ## Useful References
 
-* Check [John Papa's Angular 2 First Look Course](https://app.pluralsight.com/library/courses/angular-2-first-look/table-of-contents) and [Live Code Samples](jpapa.me/a2firstlook)
+* Check [John Papa's Angular 2 First Look Course](https://app.pluralsight.com/library/courses/angular-2-first-look/table-of-contents) and [Live Code Samples](http://jpapa.me/a2firstlook)
 * [Angular 2 Wiki](http://www.barbarianmeetscoding.com/wiki/angular-2/)
 
 
